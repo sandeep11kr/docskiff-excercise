@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Dear {{ user.first_name }}, you have following products</h2>
+  {% for product in products %}
+      <li style="text-transform:capitalize;font-size:120%;">
+        {{ product.favorite_fruit }}
+      </li>
+  {% endfor %}
+
+  <br>
+  <a href="{% url 'logout' %}">Logout</a>
+{% endblock %}
